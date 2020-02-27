@@ -1,0 +1,20 @@
+def convert_to_mandarin(num):
+  while True: 
+    try: 
+      num =int(input("input your number here : ")) 
+      mandarin = ["líng","yī","èr","sān","sì","wű","liù","qī","bā","jiû","shí"] 
+      if num <= 10:
+          print(mandarin[num]) 
+      elif num < 20: 
+          print(f"{mandarin[-1]} {mandarin[num -10]}") 
+      elif num <= 99: 
+         if num % 10 == 0: 
+           print(f"{mandarin[num//10]} {mandarin[-1]}") 
+         else: 
+           print(f"{mandarin[num//10]} {mandarin[-1]} {mandarin[num % 10]}") 
+      else : 
+         print("pls come back when it has been upgraded") 
+         break 
+    except ValueError: 
+         print("Invalid Value") 
+convert_to_mandarin("num")
